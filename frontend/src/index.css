@@ -1,7 +1,30 @@
 :root {
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-surface: #ffffff;
+  --color-hero-bg: #eef2ff;
+  --color-error: #dc2626;
+
+  --content-max-width: 64rem;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+a {
+  color: inherit;
 }

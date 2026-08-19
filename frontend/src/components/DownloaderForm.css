@@ -1,0 +1,84 @@
+.downloader-form {
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.downloader-form__label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.downloader-form__row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.downloader-form__input {
+  flex: 1 1 14rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.downloader-form__input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.downloader-form__input[aria-invalid='true'] {
+  border-color: var(--color-error);
+}
+
+.downloader-form__button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.downloader-form__button:hover,
+.downloader-form__button:focus-visible {
+  background: var(--color-primary-hover);
+}
+
+.downloader-form__message {
+  min-height: 1.5rem;
+  margin: 0.6rem 0 0;
+  font-size: 0.9rem;
+}
+
+.downloader-form__error {
+  color: var(--color-error);
+}
+
+.downloader-form__status {
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 32rem) {
+  .downloader-form__row {
+    flex-direction: column;
+  }
+
+  .downloader-form__input {
+    flex-basis: auto;
+  }
+
+  .downloader-form__button {
+    width: 100%;
+  }
+}

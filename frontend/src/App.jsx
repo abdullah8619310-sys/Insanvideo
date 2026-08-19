@@ -1,9 +1,11 @@
+import MainLayout from './layouts/MainLayout.jsx'
+import Home from './pages/Home.jsx'
+
 function App() {
   return (
-    <main>
-      <h1>InsanVideo Downloader</h1>
-      <p>Project foundation in progress.</p>
-    </main>
+    <MainLayout>
+      <Home />
+    </MainLayout>
   )
 }
 
