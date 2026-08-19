@@ -38,6 +38,24 @@
   border-color: var(--color-error);
 }
 
+.downloader-form__paste-button {
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.downloader-form__paste-button:hover,
+.downloader-form__paste-button:focus-visible {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
 .downloader-form__button {
   padding: 0.75rem 1.5rem;
   border: none;
@@ -78,6 +96,7 @@
     flex-basis: auto;
   }
 
+  .downloader-form__paste-button,
   .downloader-form__button {
     width: 100%;
   }

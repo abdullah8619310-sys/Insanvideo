@@ -7,8 +7,8 @@ function Home() {
       <div className="home-hero__inner">
         <h1 className="home-hero__title">InsanVideo Downloader</h1>
         <p className="home-hero__description">
-          Paste a supported public-media URL below to process it. InsanVideo
-          Downloader is currently in early development.
+          Paste a public Instagram photo, video, or reel link below to get
+          started. InsanVideo Downloader is currently in early development.
         </p>
         <DownloaderForm />
       </div>

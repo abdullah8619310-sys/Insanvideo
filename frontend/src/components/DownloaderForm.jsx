@@ -34,10 +34,22 @@ function DownloaderForm() {
     }
   }
 
+  async function handlePaste() {
+    try {
+      const text = await navigator.clipboard.readText()
+      setUrl(text)
+      setError('')
+      setStatus('')
+    } catch {
+      setError('Unable to read clipboard. Please paste the URL manually.')
+      setStatus('')
+    }
+  }
+
   return (
     <form className="downloader-form" onSubmit={handleSubmit} noValidate>
       <label className="downloader-form__label" htmlFor="media-url">
-        Media URL
+        Instagram Media URL
       </label>
       <div className="downloader-form__row">
         <input
@@ -45,12 +57,19 @@ function DownloaderForm() {
           className="downloader-form__input"
           type="text"
           inputMode="url"
-          placeholder="Paste a public media URL (https://...)"
+          placeholder="Paste an Instagram photo, video, or reel link"
           value={url}
           onChange={handleChange}
           aria-invalid={error !== ''}
           aria-describedby="downloader-form-message"
         />
+        <button
+          className="downloader-form__paste-button"
+          type="button"
+          onClick={handlePaste}
+        >
+          Paste
+        </button>
         <button className="downloader-form__button" type="submit">
           Download
         </button>
