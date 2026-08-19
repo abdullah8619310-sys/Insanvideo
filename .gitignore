@@ -20,6 +20,10 @@ yarn-error.log*
 # Testing
 coverage/
 
+# Local SQLite data (Instagram OAuth token storage)
+backend/data/
+*.sqlite
+
 # Editor/OS
 .vscode/*
 !.vscode/extensions.json

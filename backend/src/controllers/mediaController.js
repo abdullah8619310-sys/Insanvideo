@@ -1,14 +1,14 @@
-const { processDownload } = require('../services/downloadService')
+const { getMediaInfo } = require('../services/mediaInfoService')
 const { successResponse, errorResponse } = require('../utils/apiResponse')
 
-async function requestDownload(req, res, next) {
+async function postMediaInfo(req, res, next) {
   try {
     const { url } = req.body || {}
-    const result = await processDownload(url)
+    const result = await getMediaInfo(url)
 
     if (!result.success) {
       return errorResponse(res, {
-        statusCode: result.statusCode,
+        statusCode: 501,
         message: result.message,
         data: result.data,
       })
@@ -20,4 +20,4 @@ async function requestDownload(req, res, next) {
   }
 }
 
-module.exports = { requestDownload }
+module.exports = { postMediaInfo }
